@@ -1,4 +1,10 @@
 ---
+# Control Repo Settings
+puppet_enterprise::profile::master::code_manager_auto_configure: true
+puppet_enterprise::profile::master::r10k_private_key: '/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa'
+puppet_enterprise::profile::master::r10k_remote: 'git@github.com:jarretlavallee/control-repo.git'
+
+# NTP Config
 ntp::servers:
  - '0.us.pool.ntp.org'
  - '1.us.pool.ntp.org'
