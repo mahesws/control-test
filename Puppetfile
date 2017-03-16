@@ -6,6 +6,7 @@ mod "puppetlabs/inifile"
 mod "puppetlabs/stdlib"
 mod "puppetlabs/concat"
 mod "puppetlabs/ntp"
+mod "puppetlabs/puppet_agent"
 mod "puppet/hiera"
 
 # Modules from Git
