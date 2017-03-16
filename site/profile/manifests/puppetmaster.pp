@@ -1,10 +1,14 @@
 class profile::puppetmaster (
   $hiera_yaml = "${::settings::confdir}/hiera.yaml"
 ){
+  # Default Packages
   package { 'hiera-eyaml':
     ensure   => present,
     provider => puppet_gem,
   }
+  # Metric Collection
+  include pe_metric_curl_cron_jobs
+  # Hiera Data
   class { 'hiera':
     hierarchy  => [
       'nodes/%{::trusted.certname}',

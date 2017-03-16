@@ -18,3 +18,7 @@ mod "puppet/hiera"
 #mod 'apache',
 #  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
 #  :branch => 'docs_experiment'
+
+# Include Metrics collection
+mod "npwalker/pe_metric_curl_cron_jobs"
+  :git  => 'https://github.com/npwalker/pe_metric_curl_cron_jobs'
