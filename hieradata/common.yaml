@@ -31,3 +31,10 @@ puppet_enterprise::profile::orchestrator::java_args:
   Xms: '64m'
   'XX:+UseG1GC': ''
 
+# Common Packages
+profile::base::packages:
+  - vim
+  - git
+  - screen
+  - wget
+  - curl
