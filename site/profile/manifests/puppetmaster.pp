@@ -1,6 +1,10 @@
 class profile::puppetmaster (
   $hiera_yaml = "${::settings::confdir}/hiera.yaml"
 ){
+  package { 'hiera-eyaml':
+    ensure   => present,
+    provider => puppet_gem,
+  }
   class { 'hiera':
     hierarchy  => [
       'nodes/%{::trusted.certname}',
@@ -14,5 +18,6 @@ class profile::puppetmaster (
     owner      => 'pe-puppet',
     group      => 'pe-puppet',
     notify     => Service['pe-puppetserver'],
+    require    => Package['hiera-eyaml'],
   }
 }
