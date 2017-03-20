@@ -22,3 +22,6 @@ mod "puppet/hiera"
 # Include Metrics collection
 mod "npwalker/pe_metric_curl_cron_jobs",
   :git  => 'https://github.com/npwalker/pe_metric_curl_cron_jobs'
+
+mod "jarretlavallee/dockeragent",
+  :git  => 'https://github.com/jarretlavallee/puppet-dockeragent'
