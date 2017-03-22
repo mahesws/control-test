@@ -2,7 +2,11 @@ class profile::puppetmaster (
   $hiera_yaml = "${::settings::confdir}/hiera.yaml"
 ){
   # Default Packages
-  package { ['hiera-eyaml', 'deep_merge']:
+  package { 'hiera-eyaml':
+    ensure   => present,
+    provider => puppet_gem,
+  }
+  package { 'deep_merge':
     ensure   => present,
     provider => puppetserver_gem,
   }
