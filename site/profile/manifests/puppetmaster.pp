@@ -5,10 +5,12 @@ class profile::puppetmaster (
   package { 'hiera-eyaml':
     ensure   => present,
     provider => puppet_gem,
+    notify   => Service['pe-puppetserver'],
   }
   package { 'deep_merge':
     ensure   => present,
     provider => puppetserver_gem,
+    notify   => Service['pe-puppetserver'],
   }
   # Metric Collection
   include pe_metric_curl_cron_jobs
