@@ -27,3 +27,8 @@ mod "npwalker/pe_metric_curl_cron_jobs",
 mod "jarretlavallee/dockeragent",
   :git  => 'https://github.com/jarretlavallee/puppet-dockeragent'
 
+# Windows Modules
+mod 'puppetlabs-powershell'
+mod 'puppetlabs-registry'
+mod 'puppetlabs-chocolatey'
+

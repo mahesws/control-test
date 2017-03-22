@@ -32,9 +32,19 @@ puppet_enterprise::profile::orchestrator::java_args:
   'XX:+UseG1GC': ''
 
 # Common Packages
-profile::base::packages:
+profile::base::linux::packages:
   - vim
   - git
   - screen
   - wget
   - curl
+
+# Common Packages
+profile::base::windows::packages:
+  - googlechrome
+  - javaruntime
+  - winrar
+  - 7zip.install
+  - notepadplusplus.install
+  - git.install
+  - putty.install
