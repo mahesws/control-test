@@ -4,7 +4,7 @@ class profile::puppetmaster (
   # Default Packages
   package { ['hiera-eyaml', 'deep_merge']:
     ensure   => present,
-    provider => puppet_gem,
+    provider => puppetserver_gem,
   }
   # Metric Collection
   include pe_metric_curl_cron_jobs
