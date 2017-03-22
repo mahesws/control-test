@@ -29,6 +29,5 @@ class profile::puppetmaster (
     owner      => 'pe-puppet',
     group      => 'pe-puppet',
     notify     => Service['pe-puppetserver'],
-    require    => Package['hiera-eyaml'],
   }
 }
