@@ -16,13 +16,11 @@ class profile::puppetmaster (
       'osfamily/%{::osfamily}',
       'common',
     ],
-    eyaml      => true,
+    #eyaml      => true,
     hiera_yaml => $hiera_yaml,
-    merge_behavior => 'deeper',
     datadir    => '/etc/puppetlabs/code/environments/%{environment}/hieradata',
     owner      => 'pe-puppet',
     group      => 'pe-puppet',
     notify     => Service['pe-puppetserver'],
-    require    => Package['hiera-eyaml'],
   }
 }
