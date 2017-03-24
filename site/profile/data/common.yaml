@@ -1,13 +1,13 @@
 ---
 # Puppet Master Installation Parameters
-profile::puppetmaster::keypath: "/etc/puppetlabs/puppet/eyaml"
-profile::puppetmaster::gemprovider: "puppetserver_gem"
-profile::puppetmaster::packages:
+profile::puppetmaster::install::keypath: "/etc/puppetlabs/puppet/eyaml"
+profile::puppetmaster::install::gemprovider: "puppetserver_gem"
+profile::puppetmaster::install::packages:
   - hiera-eyaml
   - deep_merge
-profile::puppetmaster::owner: "pe-puppet"
-profile::puppetmaster::group: "pe-puppet"
-profile::puppetmaster::cmdpath:
+profile::puppetmaster::install::owner: "pe-puppet"
+profile::puppetmaster::install::group: "pe-puppet"
+profile::puppetmaster::install::cmdpath:
   - '/opt/puppetlabs/puppet/bin'
   - '/usr/bin'
   - '/usr/local/bin' 
