@@ -60,3 +60,4 @@ profile::base::solaris::packages:
   - gnu-tar
   - telnet
   - sudo
+  - ntp
