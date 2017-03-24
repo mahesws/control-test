@@ -1,5 +1,5 @@
 hieradata/nodes/example-puppet-master.yaml
-.swp
+*.swp
 keys/*
 bin/*
 
