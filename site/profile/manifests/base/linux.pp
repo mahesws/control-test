@@ -1,5 +1,5 @@
 class profile::base::linux (
-  Optional[Array] $packages = hiera_array('profile::base::linux::packages', undef)
+  Optional[Array] $packages = lookup('profile::base::linux::packages', 'unique', undef)
 ) {
 
   include ::ntp

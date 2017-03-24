@@ -1,5 +1,5 @@
 class profile::base::windows(
-  Optional[Array] $packages = hiera_array('profile::base::windows::packages', undef),
+  Optional[Array] $packages = lookup('profile::base::windows::packages', 'unique', undef),
   Integer $ie_esc_users = 1,
   Integer $ie_esc_admins = 0,
 ) {
