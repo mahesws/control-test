@@ -1,12 +1,16 @@
 class profile::puppetmaster (
-  $hiera_yaml = "${::settings::confdir}/hiera.yaml"
+  String $hiera_yaml = "${::settings::confdir}/hiera.yaml",
+  Boolean $install_eyaml = false,
 ){
 
   # Metric Collection
   include pe_metric_curl_cron_jobs
+
   if $::puppetversion and versioncmp($::puppetversion, '4.9.0') >= 0 {
   # Hiera 5
-    include profile::puppetmaster::install
+    if $install_eyaml {
+      include profile::puppetmaster::install
+    }
   } else {
   # Default Packages
   package { ['hiera-eyaml', 'deep_merge']:
