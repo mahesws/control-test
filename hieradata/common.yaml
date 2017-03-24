@@ -51,7 +51,7 @@ profile::base::windows::packages:
   - putty.install
 
 # Solaris Common Packages
-profile::base::linux::packages:
+profile::base::solaris::packages:
   - vim
   - git
   - screen
