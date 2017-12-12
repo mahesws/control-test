@@ -1,4 +1,5 @@
 ---
+# Hiera 5 Config
 # Control Repo Settings
 puppet_enterprise::profile::master::code_manager_auto_configure: true
 puppet_enterprise::profile::master::r10k_private_key: '/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa'
@@ -6,14 +7,14 @@ puppet_enterprise::profile::master::r10k_remote: 'git@github.com:jarretlavallee/
 
 # NTP Config
 ntp::servers:
- - '0.us.pool.ntp.org'
- - '1.us.pool.ntp.org'
- - '2.us.pool.ntp.org'
- - '3.us.pool.ntp.org'
+ - '0.pool.ntp.org'
+ - '1.pool.ntp.org'
+ - '2.pool.ntp.org'
+ - '3.pool.ntp.org'
 
 puppet_enterprise::profile::amq::broker::heap_mb: '96'
 puppet_enterprise::profile::master::java_args:
-  Xmx: '256m'
+  Xmx: '512m'
   Xms: '128m'
   'XX:+UseG1GC': ''
 puppet_enterprise::profile::puppetdb::java_args:
