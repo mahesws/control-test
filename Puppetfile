@@ -30,5 +30,5 @@ mod "jarretlavallee/dockeragent",
 # Windows Modules
 mod 'puppetlabs-powershell'
 mod 'puppetlabs-registry'
-mod 'puppetlabs-chocolatey'
+#mod 'puppetlabs-chocolatey'
 

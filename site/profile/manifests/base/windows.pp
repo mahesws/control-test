@@ -15,11 +15,11 @@ class profile::base::windows(
   }
 
   # Packages
-  include chocolatey
-  package { $packages:
-    ensure   => present,
-    provider => chocolatey,
-  }
+  #  include chocolatey
+  #  package { $packages:
+  #    ensure   => present,
+  #    provider => chocolatey,
+  #  }
 
   # Configure IE ESC for Users and Administrators
   #   Default: On for Users, Off for Administrators group members.
