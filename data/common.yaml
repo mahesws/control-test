@@ -13,6 +13,7 @@ puppet_enterprise::master::code_manager::sources:
     remote: 'git@github.com:jarretlavallee/control-test.git'
     ignore_branch_prefixes:
       - 'legacy'
+      - 'old'
 
 # NTP Config
 ntp::servers:
