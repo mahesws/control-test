@@ -2,8 +2,17 @@
 # Hiera 5 Config
 # Control Repo Settings
 puppet_enterprise::profile::master::code_manager_auto_configure: true
-puppet_enterprise::profile::master::r10k_private_key: '/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa'
-puppet_enterprise::profile::master::r10k_remote: 'git@github.com:jarretlavallee/control-repo.git'
+#puppet_enterprise::profile::master::r10k_private_key: '/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa'
+#puppet_enterprise::profile::master::r10k_remote: 'git@github.com:jarretlavallee/control-repo.git'
+puppet_enterprise::master::code_manager::git_settings:
+  repositories:
+    - remote: 'git@github.com:jarretlavallee/control-test.git'
+      private-key: '/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa'
+puppet_enterprise::master::code_manager::sources:
+  'puppet':
+    remote: 'git@github.com:jarretlavallee/control-test.git'
+    ignore_branch_prefixes:
+      - 'legacy'
 
 # NTP Config
 ntp::servers:
