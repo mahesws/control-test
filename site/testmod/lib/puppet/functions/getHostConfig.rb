@@ -1,11 +1,11 @@
-#require 'json'
-Puppet::Functions.create_function(:'getHostConfig') do
+require 'json'
+Puppet::Functions.create_function(:'gethostconfig') do
 
-    dispatch :getHostConfig do
+    dispatch :gethostconfig do
         param 'String', :fqdn
     end
 
-    def getHostConfig(fqdn)
+    def gethostconfig(fqdn)
         finalHostJsonContents = {}
         hostJsonContents = {}
         json_dir_prefix = '/tmp'
