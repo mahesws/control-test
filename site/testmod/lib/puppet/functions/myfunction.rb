@@ -5,7 +5,7 @@ Puppet::Functions.create_function(:myfunction) do
   end
 
   def mystring(value)
-    value + "mystring"
+    value + " mystring"
   end
 
 end
