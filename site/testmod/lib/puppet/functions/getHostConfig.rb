@@ -1,4 +1,4 @@
-require 'json'
+#require 'json'
 Puppet::Functions.create_function(:'getHostConfig') do
 
     dispatch :getHostConfig do
