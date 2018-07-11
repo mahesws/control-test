@@ -2,8 +2,9 @@
 keys/*
 bin/*
 **/spec/*
-!**/modules/*
-**/modules/**/*
+!/modules/
+!/modules/*/
+!/modules/*/**
 !**/modules/*/manifests/
 !**/modules/*/lib/
 !**/modules/*/templates/
