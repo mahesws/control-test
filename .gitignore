@@ -1,7 +1,6 @@
 *.swp
 keys/*
 bin/*
-**/spec/*
 !/modules/
 !/modules/*
 /modules/*/*
