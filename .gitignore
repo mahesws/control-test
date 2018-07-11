@@ -2,4 +2,6 @@ hieradata/nodes/example-puppet-master.yaml
 *.swp
 keys/*
 bin/*
+/spec/*
+
 
